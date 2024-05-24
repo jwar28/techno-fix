@@ -2,9 +2,30 @@
 import Layout from '../layouts/Layout.astro';
 ---
 
-
-<Layout title="Acerca de">
-	<main>
-		
-	</main>
+<Layout title='Acerca de'>
+  <main
+    class='sm:h-screen flex sm:items-center sm:justify-center max-md:mt-20 sm:max-w-7xl mx-auto'>
+    <div class='flex gap-5 p-5'>
+      <div class='flex flex-col justify-evenly'>
+        <div class='flex flex-col gap-3 p-5'>
+          <p class='text-white text-3xl'>Misión</p>
+          <p class='text-secondary text-xl text-pretty'>
+            La misión de TecnoFix es brindar un servicio de calidad, rápido y
+            confiable para la reparación y mantenimiento de dispositivos
+            electrónicos, satisfaciendo las necesidades y expectativas de los
+            clientes.
+          </p>
+        </div>
+        <div class='flex flex-col gap-3 p-5'>
+          <p class='text-white text-3xl'>Visión</p>
+          <p class='text-secondary text-xl text-pretty'>
+            Transformar la experiencia de reparación y mantenimiento de
+            dispositivos electrónicos a domicilio, ofreciendo soluciones rápidas
+            y personalizadas.
+          </p>
+        </div>
+      </div>
+      <img src='/img8.jpeg' class='h-96 max-sm:hidden' alt='image' />
+    </div>
+  </main>
 </Layout>

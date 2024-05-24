@@ -1,10 +1,10 @@
 ---
+import HeroManager from '../components/ui/hero/HeroManager';
 import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
 ---
 
-<Layout title="Inicio">
-	<main>
-		
-	</main>
+<Layout title='Inicio'>
+  <main class='p-10 mx-auto'>
+    <HeroManager client:load />
+  </main>
 </Layout>
