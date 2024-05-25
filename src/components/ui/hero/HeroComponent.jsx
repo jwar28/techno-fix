@@ -2,9 +2,12 @@ import React, { useState, useEffect } from 'react';
 
 export default function HeroComponent(props) {
   return (
-    <div className='flex flex-row justify-evenly mt-20'>
-      <img src={props.image} className='max-sm:hidden' />
-      <div class='flex flex-col gap-5 p-5 sm:w-1/2'>
+    <div className='flex flex-row justify-evenly'>
+      <img
+        src={props.image}
+        className='max-md:hidden fixed left-0 bottom-0 h-screen rounded brightness-90'
+      />
+      <div class='flex flex-col gap-5 p-5 sm:w-1/2 fixed right-0 top-1/3'>
         <p class='text-white text-5xl text-center sm:text-left'>
           {props.header}
         </p>
