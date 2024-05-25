@@ -1,0 +1,15 @@
+---
+export interface Props {
+  items: Array<string>;
+  header: string;
+}
+
+const { items, header } = Astro.props as Props;
+---
+
+<div class='flex flex-col'>
+  <h2 class='mb-2 text-xl font-semibold text-white'>{header}</h2>
+  <ul class='max-w-md space-y-1 list-disc list-inside text-secondary'>
+    {items.map((item) => <li class='text-pretty'>{item}</li>)}
+  </ul>
+</div>

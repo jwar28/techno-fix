@@ -1,10 +1,30 @@
 ---
+import Card from '../components/Card.astro';
 import Layout from '../layouts/Layout.astro';
 ---
 
-
-<Layout title="Servicios">
-	<main>
-		
-	</main>
+<Layout title='Servicios'>
+  <main
+    class='h-screen flex items-center justify-center sm:max-w-7xl mx-auto mt-56 sm:mt-0'>
+    <div class='p-6 flex flex-col gap-6 sm:gap-10 sm:flex-row'>
+      <Card
+        link='/services/phones'
+        image='/img7.png'
+        header='Reparación de Celulares y tabletas'
+        description='Reparación rápida y profesional de celulares y tabletas. ¡Calidad garantizada!'
+      />
+      <Card
+        link='/services/consoles'
+        image='/img3.png'
+        header='Reparación de Consolas de videojuegos'
+        description='Servicio técnico especializado para consolas de todas las marcas. ¡Reparaciones rápidas y confiables!'
+      />
+      <Card
+        link='/services/computers'
+        image='/img6.png'
+        header='Reparación de Computadoras'
+        description='Servicio rápido y profesional para tus dispositivos. ¡Calidad garantizada!'
+      />
+    </div>
+  </main>
 </Layout>

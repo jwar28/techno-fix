@@ -1,0 +1,30 @@
+---
+import List from '../../components/List.astro';
+import Layout from '../../layouts/Layout.astro';
+
+const items = [
+  'EI costo puede variar según el tipo de reparación o mantenimiento necesario. En promedio, podrías esperar pagar entre $50,000 COP Y $150,000 COP por servicios como limpieza, actualizaciones de software o reemplazo de batería. Con domicilio incluido.',
+  'El mantenimiento de tabletas, como reparación de pantalla o actualización de software, podria costar alrededor de $80,000 COP a $200.000 COP.',
+];
+---
+
+<Layout title='Reparación de celulares y tabletas'>
+  <main class='h-screen flex items-center justify-center sm:max-w-7xl mx-auto'>
+    <div class='flex flex-col gap-10 p-6'>
+      <p class='text-white text-3xl text-center text-balance'>
+        Reparación de Celulares y tabletas
+      </p>
+
+      <div class='flex flex-col sm:flex-row gap-5'>
+        <img src='/img7.png' alt='image' class='rounded' />
+        <List items={items} header='Servicio' />
+      </div>
+
+      <a
+        href='/contact'
+        class='w-fit self-center py-2.5 px-5 me-2 mb-2 text-sm font-medium focus:outline-none rounded-lg border focus:z-10 focus:ring-4 focus:ring-gray-700 bg-gray-800 text-gray-400 border-gray-600 hover:text-white hover:bg-gray-700'>
+        Contactanos
+      </a>
+    </div>
+  </main>
+</Layout>

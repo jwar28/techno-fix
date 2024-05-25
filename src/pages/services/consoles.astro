@@ -1,0 +1,29 @@
+---
+import List from '../../components/List.astro';
+import Layout from '../../layouts/Layout.astro';
+
+const items = [
+  'Para servicios de mantenimiento en consolas (reparación de hardware, limpieza, etc.), el precio puede variar desde $100.000 COP hasta $250,000 COP. Con el domicilio incluido',
+];
+---
+
+<Layout title='Reparación de celulares y tabletas'>
+  <main class='h-screen flex items-center justify-center sm:max-w-7xl mx-auto'>
+    <div class='flex flex-col gap-10 p-6'>
+      <p class='text-white text-3xl text-center text-balance'>
+        Reparación de Consolas de videojuegos
+      </p>
+
+      <div class='flex flex-col sm:flex-row gap-5'>
+        <img src='/img3.png' alt='image' class='rounded' />
+        <List items={items} header='Servicio' />
+      </div>
+
+      <a
+        href='/contact'
+        class='w-fit self-center py-2.5 px-5 me-2 mb-2 text-sm font-medium focus:outline-none rounded-lg border focus:z-10 focus:ring-4 focus:ring-gray-700 bg-gray-800 text-gray-400 border-gray-600 hover:text-white hover:bg-gray-700'>
+        Contactanos
+      </a>
+    </div>
+  </main>
+</Layout>
