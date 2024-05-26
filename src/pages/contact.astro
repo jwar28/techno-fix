@@ -6,7 +6,7 @@ import { Icon } from 'astro-icon/components';
 <Layout title='Contactanos'>
   <main class='h-screen flex items-center justify-center sm:max-w-7xl mx-auto'>
     <div class='flex flex-col sm:flex-row gap-10'>
-      <div class='flex flex-col justify-around items-center gap-7'>
+      <div class='flex flex-col justify-center items-center gap-5'>
         <p class='text-white text-4xl text-center'>¡LLAMANOS O ESCRIBENOS!</p>
         <button
           type='button'
@@ -14,20 +14,22 @@ import { Icon } from 'astro-icon/components';
           <Icon name='phone' />
           (605) 5677712
         </button>
-        <button
-          type='button'
+        <a
+          href='https://wa.me/573184214427'
+          target='_blank'
           class='text-white w-fit flex gap-2 items-center justify-center focus:ring-4 focus:outline-none font-medium rounded-lg text-sm px-6 pr-9 py-2 text-center bg-[#0cc143] hover:bg-[#088e31] focus:ring-[#0cc143]'>
           <Icon name='whatsapp' />
           300 1237654
-        </button>
-        <button
-          type='button'
+        </a>
+        <a
+          href='https://www.instagram.com/manolodaza26?igsh=NmZ1eGU5Mjl3cGNi'
+          target='_blank'
           class='text-white w-fit flex gap-2 items-center justify-center focus:ring-4 focus:outline-none font-medium rounded-lg text-sm px-6 pr-12 py-2 text-center bg-[#4e5dca] hover:bg-[#4451b2] focus:ring-[#4e5dca]'>
           <Icon name='instagram' />
           Techno_fix
-        </button>
+        </a>
       </div>
-      <img src='/img4.png' alt='image' />
+      <img src='/img4.png' class='h-96' alt='image' />
     </div>
   </main>
 </Layout>
