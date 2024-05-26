@@ -3,12 +3,11 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title='Acerca de'>
-  <main
-    class='max-h-svh mt-20 flex items-center justify-center sm:max-w-7xl mx-auto'>
-    <div class='flex gap-5 p-5 justify-center'>
-      <div class='flex flex-col justify-evenly max-w-2xl mt-16'>
+  <main class='flex items-center justify-center sm:max-w-7xl mx-auto h-full'>
+    <div class='flex p-5 justify-center'>
+      <div class='flex flex-col justify-evenly max-w-2xl sm:mr-36'>
         <div class='flex flex-col gap-3 p-5'>
-          <p class='text-white text-3xl'>Misión</p>
+          <p class='text-white text-2xl'>Misión</p>
           <p class='text-secondary text-xl text-balance'>
             La misión de TecnoFix es brindar un servicio de calidad, rápido y
             confiable para la reparación y mantenimiento de dispositivos
@@ -17,7 +16,7 @@ import Layout from '../layouts/Layout.astro';
           </p>
         </div>
         <div class='flex flex-col gap-3 p-5'>
-          <p class='text-white text-3xl'>Visión</p>
+          <p class='text-white text-2xl'>Visión</p>
           <p class='text-secondary text-xl text-balance'>
             Transformar la experiencia de reparación y mantenimiento de
             dispositivos electrónicos a domicilio, ofreciendo soluciones rápidas
@@ -27,7 +26,7 @@ import Layout from '../layouts/Layout.astro';
       </div>
       <img
         src='/img8.png'
-        class='absolute h-5/6 right-0 max-sm:hidden'
+        class='fixed h-full mt-20 right-0 top-2 max-sm:hidden'
         alt='image'
       />
     </div>
