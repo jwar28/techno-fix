@@ -9,11 +9,11 @@ const currentPath = pathname.slice(1);
   class='bg-[#020617] relative w-full z-20 top-0 start-0 border-b border-gray-600'
   transition:persist>
   <div
-    class='max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4'>
+    class='max-w-screen-xl flex flex-wrap items-center justify-between mx-auto'>
     <a href='/' class='flex items-center space-x-3 rtl:space-x-reverse'>
-      <img src='/logo.png' class='h-14' alt='Logo' />
+      <img src='/logo.png' class='h-14 sm:h-24 py-2' alt='Logo' />
       <span
-        class='self-center text-2xl font-semibold whitespace-nowrap text-white'
+        class='self-center text-2xl sm:text-4xl font-semibold whitespace-nowrap text-white'
         >TechnoFix</span
       >
     </a>
@@ -22,7 +22,7 @@ const currentPath = pathname.slice(1);
         transition:persist
         href='https://wa.me/573184214427'
         target='_blank'
-        class='text-white flex gap-2 items-center justify-center focus:ring-4 focus:outline-none font-medium rounded-lg text-sm px-6 py-2 text-center bg-[#0cc143] hover:bg-[#088e31] focus:ring-[#0cc143]'>
+        class='text-white sm:text-3xl flex gap-2 items-center justify-center focus:ring-4 focus:outline-none font-medium rounded-lg text-sm px-6 py-2 text-center bg-[#0cc143] hover:bg-[#088e31] focus:ring-[#0cc143]'>
         <Icon name='whatsapp' />
         3001237654
       </a>
@@ -56,28 +56,28 @@ const currentPath = pathname.slice(1);
         <li>
           <a
             href='/'
-            class='block py-2 px-3 rounded md:p-0 md:hover:text-blue-500 text-white hover:bg-gray-700 hover:text-white md:hover:bg-transparent border-gray-700'
+            class='block sm:text-3xl py-2 px-3 rounded md:p-0 md:hover:text-blue-500 text-white hover:bg-gray-700 hover:text-white md:hover:bg-transparent border-gray-700'
             aria-current='page'>Inicio</a
           >
         </li>
         <li>
           <a
             href='/about'
-            class='block py-2 px-3 rounded md:p-0 md:hover:text-blue-500 text-white hover:bg-gray-700 hover:text-white md:hover:bg-transparent border-gray-700'
+            class='block sm:text-3xl py-2 px-3 rounded md:p-0 md:hover:text-blue-500 text-white hover:bg-gray-700 hover:text-white md:hover:bg-transparent border-gray-700'
             >Acerca de</a
           >
         </li>
         <li>
           <a
             href='/services'
-            class='block py-2 px-3 rounded md:p-0 md:hover:text-blue-500 text-white hover:bg-gray-700 hover:text-white md:hover:bg-transparent border-gray-700'
+            class='block sm:text-3xl py-2 px-3 rounded md:p-0 md:hover:text-blue-500 text-white hover:bg-gray-700 hover:text-white md:hover:bg-transparent border-gray-700'
             >Servicios</a
           >
         </li>
         <li>
           <a
             href='/contact'
-            class='block py-2 px-3 rounded md:p-0 md:hover:text-blue-500 text-white hover:bg-gray-700 hover:text-white md:hover:bg-transparent border-gray-700 $ active:bg-blue-700'
+            class='block sm:text-3xl py-2 px-3 rounded md:p-0 md:hover:text-blue-500 text-white hover:bg-gray-700 hover:text-white md:hover:bg-transparent border-gray-700 $ active:bg-blue-700'
             >Contactanos</a
           >
         </li>
