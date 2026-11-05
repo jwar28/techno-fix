@@ -7,5 +7,5 @@ import sitemap from '@astrojs/sitemap';
 // https://astro.build/config
 export default defineConfig({
   site: 'https://techno-fix-five.vercel.app/',
-  integrations: [tailwind(), react(), icon(), sitemap()],
+  integrations: [tailwind({ applyBaseStyles: false }), react(), icon(), sitemap()],
 });

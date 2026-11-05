@@ -1,0 +1,43 @@
+---
+import {
+  INSTAGRAM_HANDLE,
+  INSTAGRAM_URL,
+  PHONE_DISPLAY,
+  PHONE_TEL,
+  WHATSAPP_DISPLAY,
+  WHATSAPP_NUMBER,
+} from '../../data/services';
+---
+
+<footer class='border-t border-white/20 bg-mat-deep'>
+  <div
+    class='mx-auto grid max-w-page gap-8 px-4 py-10 text-[15px] text-fog sm:grid-cols-[1.4fr_1fr_1fr] sm:px-8'>
+    <div>
+      <p class='text-[24px] font-black uppercase text-white' style='font-stretch:80%'>
+        Tecno<span class='text-mint'>Fix</span>
+      </p>
+      <p class='mt-2 max-w-[38ch]'>
+        Reparación y mantenimiento de dispositivos electrónicos a domicilio en
+        Barranquilla y su área metropolitana.
+      </p>
+    </div>
+    <div>
+      <p class='font-semibold text-white'>Contacto</p>
+      <ul class='mt-2 space-y-1'>
+        <li>
+          WhatsApp <a class='num text-white' href={`https://wa.me/${WHATSAPP_NUMBER}`} target='_blank' rel='noopener'>{WHATSAPP_DISPLAY}</a>
+        </li>
+        <li>Teléfono <a class='num text-white' href={`tel:${PHONE_TEL}`}>{PHONE_DISPLAY}</a></li>
+        <li>Instagram <a class='text-white' href={INSTAGRAM_URL} target='_blank' rel='noopener'>{INSTAGRAM_HANDLE}</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class='font-semibold text-white'>Sitio</p>
+      <ul class='mt-2 space-y-1'>
+        <li><a class='text-fog hover:text-white' href='/services'>Servicios y precios</a></li>
+        <li><a class='text-fog hover:text-white' href='/about'>Nosotros</a></li>
+        <li><a class='text-fog hover:text-white' href='/contact'>Contacto</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>

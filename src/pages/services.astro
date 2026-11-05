@@ -1,30 +1,37 @@
 ---
-import Card from '../components/Card.astro';
 import Layout from '../layouts/Layout.astro';
+import PriceList from '../components/PriceList.astro';
+import OrdenServicio from '../components/OrdenServicio.jsx';
 ---
 
-<Layout title='Servicios'>
-  <main
-    class='h-full flex items-center justify-center sm:max-w-7xl mx-auto mt-32 sm:mt-0'>
-    <div class='p-6 flex flex-col gap-6 sm:gap-10 sm:flex-row'>
-      <Card
-        link='/services/phones'
-        image='/img7.png'
-        header='Reparación de Celulares y tabletas'
-        description='Reparación rápida y profesional de celulares y tabletas. ¡Calidad garantizada!'
-      />
-      <Card
-        link='/services/consoles'
-        image='/img3.png'
-        header='Reparación de Consolas de videojuegos'
-        description='Servicio técnico especializado para consolas de todas las marcas.'
-      />
-      <Card
-        link='/services/computers'
-        image='/img6.png'
-        header='Reparación de Computadoras'
-        description='Servicio rápido y profesional para tus dispositivos. ¡Calidad garantizada!'
-      />
+<Layout
+  title='Servicios y precios'
+  description='Precios de reparación de celulares, tabletas, consolas y computadores a domicilio en Barranquilla. Domicilio incluido y diagnóstico gratis.'>
+  <section class='mx-auto max-w-page px-4 pb-20 pt-10 sm:px-8 lg:pt-14'>
+    <div class='mb-10 grid gap-6 lg:grid-cols-[1fr_1fr] lg:items-end'>
+      <h1 class='display text-[clamp(48px,7.5vw,96px)] text-white'>
+        Servicios y precios
+      </h1>
+      <p class='max-w-[46ch] text-[18px] leading-relaxed text-fog lg:justify-self-end'>
+        Rangos en pesos colombianos con domicilio incluido, todos sobre la misma
+        escala. Toca un servicio para ver qué incluye.
+      </p>
     </div>
-  </main>
+    <PriceList />
+  </section>
+  <section class='border-t border-white/20 bg-mat-deep/60'>
+    <div
+      class='mx-auto grid max-w-page items-center gap-12 px-4 py-20 sm:px-8 lg:grid-cols-[minmax(0,1fr)_minmax(0,560px)]'>
+      <div>
+        <h2 class='display text-[clamp(40px,6vw,72px)] text-white'>
+          ¿Ya sabes qué necesitas?
+        </h2>
+        <p class='mt-6 max-w-[42ch] text-[19px] leading-relaxed text-fog'>
+          Llena la orden y te escribimos por WhatsApp para agendar el
+          diagnóstico gratis en tu casa.
+        </p>
+      </div>
+      <OrdenServicio client:visible />
+    </div>
+  </section>
 </Layout>

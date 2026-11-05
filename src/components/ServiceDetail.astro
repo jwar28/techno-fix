@@ -1,0 +1,64 @@
+---
+import Layout from '../layouts/Layout.astro';
+import OrdenServicio from './OrdenServicio.jsx';
+import { devices, formatCOP, type DeviceId } from '../data/services';
+
+interface Props {
+  title: string;
+  lead: string;
+  deviceIds: DeviceId[];
+  image: string;
+  imageAlt: string;
+  caption: string;
+}
+const { title, lead, deviceIds, image, imageAlt, caption } = Astro.props;
+const items = devices.filter((d) => deviceIds.includes(d.id));
+---
+
+<Layout title={title} description={`${title} a domicilio en Barranquilla. ${lead}`}>
+  <section class='mx-auto max-w-page px-4 pb-24 pt-8 sm:px-8 lg:pt-12'>
+    <nav aria-label='Ruta' class='mb-8 text-[15px] text-fog'>
+      <a href='/services' class='text-fog hover:text-white'>Servicios y precios</a>
+      <span aria-hidden='true' class='mx-2 text-mint'>/</span>
+      <span class='text-white' aria-current='page'>{title}</span>
+    </nav>
+
+    <div class='grid gap-x-12 gap-y-14 lg:grid-cols-[minmax(0,1fr)_minmax(0,560px)]'>
+      <div>
+        <h1 class='display text-[clamp(44px,7vw,88px)] text-white'>{title}</h1>
+        <p class='mt-6 max-w-[46ch] text-[19px] leading-relaxed text-fog'>{lead}</p>
+
+        <dl class='mt-10 border-t border-white/25'>
+          {
+            items.map((d) => (
+              <div class='grid gap-2 border-b border-white/25 py-5 sm:grid-cols-[1fr_auto] sm:items-baseline sm:gap-6'>
+                <dt>
+                  <span class='block text-[24px] font-black uppercase leading-none text-white' style='font-stretch:75%'>
+                    {d.plural}
+                  </span>
+                  <span class='mt-2 block max-w-[40ch] text-[16px] text-fog'>{d.includes}</span>
+                </dt>
+                <dd class='num text-[32px] font-black leading-none text-mint' style='font-stretch:75%'>
+                  {formatCOP(d.min)} – {formatCOP(d.max)}
+                </dd>
+              </div>
+            ))
+          }
+        </dl>
+        <p class='mt-4 text-[15px] text-fog'>
+          Precios en pesos colombianos, domicilio incluido. El valor final se
+          confirma después del diagnóstico gratis.
+        </p>
+
+        <figure class='print mt-12 w-full max-w-[460px] rotate-[1.2deg]'>
+          <img src={image} alt={imageAlt} width='498' height='220' loading='lazy' />
+          <figcaption>{caption}</figcaption>
+        </figure>
+      </div>
+
+      <div class='lg:sticky lg:top-[104px] lg:self-start'>
+        <OrdenServicio client:load initialDevice={deviceIds[0]} />
+      </div>
+    </div>
+  </section>
+</Layout>

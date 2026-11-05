@@ -1,0 +1,171 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --mat: #24575a;
+  --mat-deep: #1b4547;
+  --mint: #9fe3d6;
+  --fog: #ddedeb;
+  --paper: #f7f7f2;
+  --paper-rule: #cbcec5;
+  --paper-dim: #5a605c;
+  --carbon: #1f3fd1;
+  --stamp: #d7261e;
+  --ink: #121615;
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  color-scheme: dark;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 96px;
+    -webkit-text-size-adjust: 100%;
+  }
+  body {
+    @apply font-sans text-fog antialiased;
+    background-color: var(--mat);
+    /* Tapete antiestático: cuadrícula fina de 24px y mayor de 120px */
+    background-image:
+      linear-gradient(rgb(255 255 255 / 0.11) 1px, transparent 1px),
+      linear-gradient(90deg, rgb(255 255 255 / 0.11) 1px, transparent 1px),
+      linear-gradient(rgb(255 255 255 / 0.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgb(255 255 255 / 0.05) 1px, transparent 1px);
+    background-size:
+      120px 120px,
+      120px 120px,
+      24px 24px,
+      24px 24px;
+    background-position: -1px -1px;
+  }
+  ::selection {
+    background: var(--mint);
+    color: var(--ink);
+  }
+  .paper ::selection,
+  .paper::selection {
+    background: #c9d3ff;
+    color: var(--ink);
+  }
+  :focus-visible {
+    outline: 3px solid var(--mint);
+    outline-offset: 3px;
+  }
+  .paper :focus-visible {
+    outline-color: var(--carbon);
+  }
+  a {
+    text-underline-offset: 0.2em;
+    text-decoration-thickness: 1.5px;
+  }
+  html {
+    scrollbar-color: #4f8285 var(--mat-deep);
+  }
+}
+
+@layer components {
+  .display {
+    font-weight: 900;
+    font-stretch: 72%;
+    text-transform: uppercase;
+    letter-spacing: -0.01em;
+    line-height: 0.92;
+    text-wrap: balance;
+  }
+  .paper {
+    background: var(--paper);
+    color: var(--ink);
+  }
+  .field-label {
+    @apply block text-[13px] font-semibold uppercase tracking-[0.12em] text-paper-dim;
+  }
+  .typed {
+    font-family: 'Courier Prime', ui-monospace, monospace;
+    color: var(--carbon);
+  }
+  .num {
+    font-variant-numeric: tabular-nums;
+  }
+
+  /* Impresión de foto adjunta: el fondo blanco de las fotos se funde con el borde */
+  .print {
+    background: #fff;
+    padding: 10px 10px 0;
+    color: var(--ink);
+  }
+  .print img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  .print figcaption {
+    font-family: 'Courier Prime', ui-monospace, monospace;
+    font-size: 13px;
+    padding: 8px 2px 10px;
+    color: #3d4340;
+  }
+
+  .stamp {
+    color: var(--stamp);
+    border: 3px solid currentColor;
+    outline: 1.5px solid currentColor;
+    outline-offset: -8px;
+    border-radius: 9999px;
+    font-weight: 900;
+    font-stretch: 70%;
+    text-transform: uppercase;
+    line-height: 0.95;
+    display: grid;
+    place-items: center;
+    text-align: center;
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center gap-3 px-6 py-4 text-[17px] font-bold transition-colors duration-150;
+    min-height: 52px;
+  }
+  .btn-ink {
+    @apply btn bg-ink text-paper hover:bg-carbon;
+  }
+  .btn-line {
+    @apply btn border-[1.5px] border-ink text-ink hover:bg-ink hover:text-paper;
+  }
+  .btn-paper {
+    @apply btn bg-paper text-ink hover:bg-mint;
+  }
+  .btn-ghost {
+    @apply btn border-[1.5px] border-fog/70 text-white hover:border-white hover:bg-white/10;
+  }
+
+  /* Borde perforado del talonario */
+  .perforated {
+    position: relative;
+  }
+  .perforated::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -9px;
+    height: 10px;
+    background: radial-gradient(
+        circle at 10px 10px,
+        transparent 5.5px,
+        var(--paper) 6px
+      )
+      0 0 / 20px 20px repeat-x;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}

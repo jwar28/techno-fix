@@ -1,34 +1,54 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import Proceso from '../components/Proceso.astro';
 ---
 
-<Layout title='Acerca de'>
-  <main class='flex items-center justify-center sm:max-w-7xl mx-auto h-full'>
-    <div class='flex p-5 justify-center'>
-      <div class='flex flex-col justify-evenly max-w-2xl sm:mr-36'>
-        <div class='flex flex-col gap-3 p-5'>
-          <p class='text-white text-2xl'>Misión</p>
-          <p class='text-secondary text-xl text-balance'>
-            La misión de TecnoFix es brindar un servicio de calidad, rápido y
-            confiable para la reparación y mantenimiento de dispositivos
-            electrónicos, satisfaciendo las necesidades y expectativas de los
-            clientes.
+<Layout
+  title='Nosotros'
+  description='TecnoFix: servicio técnico de reparación y mantenimiento de dispositivos electrónicos a domicilio en Barranquilla.'>
+  <section
+    class='mx-auto grid max-w-page items-center gap-12 px-4 pb-20 pt-10 sm:px-8 lg:grid-cols-[1fr_minmax(0,440px)] lg:pt-14'>
+    <div>
+      <h1 class='display text-[clamp(48px,7.5vw,96px)] text-white'>
+        El taller que va a tu casa
+      </h1>
+      <div class='mt-10 grid gap-8 border-t border-white/25 pt-8 md:grid-cols-2'>
+        <div>
+          <h2 class='text-[26px] font-black uppercase text-mint' style='font-stretch:75%'>Misión</h2>
+          <p class='mt-3 text-[18px] leading-relaxed text-fog'>
+            Brindar un servicio de calidad, rápido y confiable para la reparación
+            y mantenimiento de dispositivos electrónicos, satisfaciendo las
+            necesidades y expectativas de nuestros clientes.
           </p>
         </div>
-        <div class='flex flex-col gap-3 p-5'>
-          <p class='text-white text-2xl'>Visión</p>
-          <p class='text-secondary text-xl text-balance'>
+        <div>
+          <h2 class='text-[26px] font-black uppercase text-mint' style='font-stretch:75%'>Visión</h2>
+          <p class='mt-3 text-[18px] leading-relaxed text-fog'>
             Transformar la experiencia de reparación y mantenimiento de
             dispositivos electrónicos a domicilio, ofreciendo soluciones rápidas
             y personalizadas.
           </p>
         </div>
       </div>
-      <img
-        src='/img8.png'
-        class='fixed h-full mt-20 right-0 top-2 max-sm:hidden'
-        alt='image'
-      />
     </div>
-  </main>
+    <figure class='print mx-auto w-full max-w-[440px] rotate-[1.5deg]'>
+      <img
+        src='/img8.jpeg'
+        alt='Técnico de TecnoFix con gafas de protección reparando un disco duro'
+        width='488'
+        height='513'
+      />
+      <figcaption>En el banco de trabajo</figcaption>
+    </figure>
+  </section>
+  <section class='border-t border-white/20'>
+    <div class='mx-auto max-w-page px-4 py-20 sm:px-8'>
+      <h2 class='display mb-10 text-[clamp(40px,6vw,72px)] text-white'>Así trabajamos</h2>
+      <Proceso />
+      <div class='mt-12 flex flex-wrap gap-3'>
+        <a href='/services' class='btn-paper no-underline'>Ver servicios y precios</a>
+        <a href='/contact' class='btn-ghost no-underline'>Contáctanos</a>
+      </div>
+    </div>
+  </section>
 </Layout>

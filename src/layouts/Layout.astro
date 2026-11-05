@@ -1,41 +1,50 @@
 ---
 import { ViewTransitions } from 'astro:transitions';
+import '@fontsource-variable/archivo/wdth.css';
+import '@fontsource/courier-prime/400.css';
+import '@fontsource/courier-prime/700.css';
+import '../styles/global.css';
 import Navbar from '../components/ui/Navbar.astro';
-import Container from '../components/ui/Container.astro';
+import Footer from '../components/ui/Footer.astro';
 
 interface Props {
   title: string;
+  description?: string;
 }
 
-const { title } = Astro.props;
+const {
+  title,
+  description = 'Reparación de celulares, tabletas, consolas y computadores a domicilio en Barranquilla. Diagnóstico gratis, precios claros y garantía.',
+} = Astro.props;
+const fullTitle = title === 'Inicio' ? 'TecnoFix · Servicio técnico a domicilio en Barranquilla' : `${title} · TecnoFix`;
 ---
 
 <!doctype html>
-<html lang='en'>
+<html lang='es'>
   <head>
     <meta charset='UTF-8' />
-    <meta name='description' content='Astro description' />
-    <meta name='viewport' content='width=device-width' />
-    <link rel='icon' type='image/svg+xml' href='/logo.png' />
+    <meta name='description' content={description} />
+    <meta name='viewport' content='width=device-width, initial-scale=1' />
+    <meta name='theme-color' content='#24575A' />
+    <link rel='icon' type='image/png' href='/logo.png' />
     <link rel='sitemap' href='/sitemap-index.xml' />
+    <meta property='og:title' content={fullTitle} />
+    <meta property='og:description' content={description} />
+    <meta property='og:locale' content='es_CO' />
     <meta name='generator' content={Astro.generator} />
-    <title>{title}</title>
+    <title>{fullTitle}</title>
     <ViewTransitions />
   </head>
-  <body>
-    <div class='fixed left-0 top-0 -z-10 h-full w-full'>
-      <div class='relative h-full w-full bg-slate-950'>
-        <div
-          class='absolute bottom-0 left-0 right-0 top-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:14px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]'>
-        </div>
-      </div>
-    </div>
-    <Container>
+  <body class='min-h-screen flex flex-col'>
+    <a
+      href='#contenido'
+      class='sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:bg-paper focus:px-4 focus:py-3 focus:text-ink'
+      >Saltar al contenido</a
+    >
+    <Navbar />
+    <main id='contenido' class='flex-1'>
       <slot />
-    </Container>
-    <script
-      is:inline
-      src='https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.0/flowbite.min.js'
-    ></script>
+    </main>
+    <Footer />
   </body>
 </html>

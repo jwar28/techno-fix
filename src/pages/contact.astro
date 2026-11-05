@@ -1,35 +1,26 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import { Icon } from 'astro-icon/components';
+import Contacto from '../components/Contacto.astro';
+import OrdenServicio from '../components/OrdenServicio.jsx';
 ---
 
-<Layout title='Contactanos'>
-  <main class='h-screen flex items-center justify-center sm:max-w-7xl mx-auto'>
-    <div class='flex flex-col sm:flex-row gap-10'>
-      <div class='flex flex-col justify-center items-center gap-5'>
-        <p class='text-white text-4xl text-center'>¡LLAMANOS O ESCRIBENOS!</p>
-        <button
-          type='button'
-          class='text-white w-fit flex gap-2 items-center justify-center focus:ring-4 focus:outline-none font-medium rounded-lg text-sm px-6 py-2 text-center bg-gray-800 hover:bg-gray-700 focus:ring-gray-700'>
-          <Icon name='phone' />
-          (605) 5677712
-        </button>
-        <a
-          href='https://wa.me/573184214427'
-          target='_blank'
-          class='text-white w-fit flex gap-2 items-center justify-center focus:ring-4 focus:outline-none font-medium rounded-lg text-sm px-6 pr-9 py-2 text-center bg-[#0cc143] hover:bg-[#088e31] focus:ring-[#0cc143]'>
-          <Icon name='whatsapp' />
-          300 1237654
-        </a>
-        <a
-          href='https://www.instagram.com/manolodaza26?igsh=NmZ1eGU5Mjl3cGNi'
-          target='_blank'
-          class='text-white w-fit flex gap-2 items-center justify-center focus:ring-4 focus:outline-none font-medium rounded-lg text-sm px-6 pr-12 py-2 text-center bg-[#4e5dca] hover:bg-[#4451b2] focus:ring-[#4e5dca]'>
-          <Icon name='instagram' />
-          Techno_fix
-        </a>
+<Layout
+  title='Contacto'
+  description='Escríbele a TecnoFix por WhatsApp o llama para agendar tu diagnóstico gratis a domicilio en Barranquilla.'>
+  <section
+    class='mx-auto grid max-w-page gap-x-12 gap-y-14 px-4 pb-24 pt-10 sm:px-8 lg:grid-cols-[minmax(0,1fr)_minmax(0,560px)] lg:pt-14'>
+    <div>
+      <h1 class='display text-[clamp(48px,7.5vw,96px)] text-white'>
+        Llámanos o escríbenos
+      </h1>
+      <p class='mb-10 mt-6 max-w-[44ch] text-[19px] leading-relaxed text-fog'>
+        La forma más rápida es WhatsApp: llena la orden y nos llega con tu
+        equipo, el problema y el precio estimado.
+      </p>
+      <div class='[&_ul]:sm:grid-cols-1'>
+        <Contacto />
       </div>
-      <img src='/img4.png' class='h-96 max-sm:hidden' alt='image' />
     </div>
-  </main>
+    <OrdenServicio client:load />
+  </section>
 </Layout>

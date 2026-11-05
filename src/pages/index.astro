@@ -1,10 +1,130 @@
 ---
-import HeroManager from '../components/ui/hero/HeroManager';
 import Layout from '../layouts/Layout.astro';
+import OrdenServicio from '../components/OrdenServicio.jsx';
+import PriceList from '../components/PriceList.astro';
+import Proceso from '../components/Proceso.astro';
+import Contacto from '../components/Contacto.astro';
+
+const promesas = ['Diagnóstico gratis', 'Domicilio incluido', 'Reparación con garantía'];
 ---
 
 <Layout title='Inicio'>
-  <main class='p-10 mx-auto flex items-center justify-center'>
-    <HeroManager client:load />
-  </main>
+  <!-- Primer viewport: titular + la orden de servicio funcional -->
+  <section
+    class='mx-auto grid max-w-page gap-x-12 gap-y-8 px-4 pb-28 pt-8 sm:px-8 lg:grid-cols-[minmax(0,1fr)_minmax(0,560px)] lg:grid-rows-[auto_1fr] lg:gap-y-0 lg:pb-40 lg:pt-14'>
+    <h1 class='display text-[clamp(46px,8.4vw,96px)] text-white lg:col-start-1 lg:row-start-1 lg:self-start'>
+      Llena la orden.<br /> Vamos a tu casa.
+    </h1>
+
+    <div class='relative mt-4 justify-self-center lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:mt-0 lg:self-start lg:justify-self-end'>
+      <OrdenServicio client:load tilt />
+      <figure
+        class='print relative z-20 -mt-3 ml-auto mr-2 w-[230px] rotate-[3deg] lg:absolute lg:-bottom-[150px] lg:-left-36 lg:m-0 lg:w-[250px] lg:-rotate-[5deg]'>
+        <img
+          src='/img7.png'
+          alt='Técnico con guantes reparando la placa de un celular'
+          width='498'
+          height='220'
+        />
+        <figcaption>Reparación de placa de celular</figcaption>
+      </figure>
+    </div>
+
+    <div class='lg:col-start-1 lg:row-start-2'>
+      <p class='mt-2 max-w-[44ch] text-[clamp(18px,1.6vw,21px)] leading-relaxed text-fog lg:mt-6'>
+        Reparamos celulares, tabletas, consolas y computadores a domicilio en
+        Barranquilla. Elige tu equipo, mira el precio y mándanos la orden por
+        WhatsApp.
+      </p>
+      <ul class='mt-8 flex flex-wrap gap-x-6 gap-y-3 border-t border-white/25 pt-5'>
+        {
+          promesas.map((p) => (
+            <li class='flex items-center gap-2.5 text-[17px] font-semibold text-white'>
+              <svg width='18' height='18' viewBox='0 0 18 18' aria-hidden='true' class='text-mint'>
+                <path d='M2 9.5l4.5 4.5L16 4' fill='none' stroke='currentColor' stroke-width='2.5' />
+              </svg>
+              {p}
+            </li>
+          ))
+        }
+      </ul>
+      <a
+        href='#precios'
+        class='mt-8 inline-flex items-center gap-2 text-[17px] font-semibold text-mint underline hover:text-white'>
+        Ver todos los precios
+        <svg width='12' height='14' viewBox='0 0 12 14' aria-hidden='true'>
+          <path d='M6 1v11M1 7l5 5 5-5' fill='none' stroke='currentColor' stroke-width='2' />
+        </svg>
+      </a>
+    </div>
+  </section>
+
+  <!-- Precios -->
+  <section id='precios' class='border-t border-white/20 bg-mat-deep/60'>
+    <div class='mx-auto max-w-page px-4 py-20 sm:px-8 lg:py-28'>
+      <div class='mb-10 grid gap-6 lg:grid-cols-[1fr_1fr] lg:items-end'>
+        <h2 class='display text-[clamp(40px,6vw,72px)] text-white'>
+          Precios claros antes de empezar
+        </h2>
+        <p class='max-w-[46ch] text-[18px] leading-relaxed text-fog lg:justify-self-end'>
+          Todos los rangos están dibujados sobre la misma escala, para que veas
+          de un vistazo cuánto cuesta cada servicio. Toca uno para ver el detalle.
+        </p>
+      </div>
+      <PriceList />
+    </div>
+  </section>
+
+  <!-- Proceso -->
+  <section id='como-trabajamos' class='border-t border-white/20'>
+    <div class='mx-auto max-w-page px-4 py-20 sm:px-8 lg:py-28'>
+      <h2 class='display mb-10 max-w-[14ch] text-[clamp(40px,6vw,72px)] text-white'>
+        Así trabajamos
+      </h2>
+      <Proceso />
+    </div>
+  </section>
+
+  <!-- Nosotros -->
+  <section class='border-t border-white/20 bg-mat-deep/60'>
+    <div
+      class='mx-auto grid max-w-page items-center gap-12 px-4 py-20 sm:px-8 lg:grid-cols-[minmax(0,420px)_1fr] lg:py-28'>
+      <figure class='print mx-auto w-full max-w-[420px] rotate-[-1.5deg]'>
+        <img
+          src='/img1.jpeg'
+          alt='Técnico de TecnoFix con gafas de protección soldando una tarjeta electrónica'
+          width='981'
+          height='858'
+          loading='lazy'
+        />
+        <figcaption>Técnico TecnoFix · Barranquilla</figcaption>
+      </figure>
+      <div>
+        <h2 class='display text-[clamp(40px,6vw,72px)] text-white'>
+          El taller va a tu casa
+        </h2>
+        <p class='mt-6 max-w-[58ch] text-[19px] leading-relaxed text-fog'>
+          Nuestra misión es brindar un servicio de calidad, rápido y confiable
+          para la reparación y mantenimiento de tus dispositivos electrónicos.
+          Queremos transformar la experiencia de reparar un equipo: soluciones
+          rápidas y personalizadas, sin que tengas que salir de casa.
+        </p>
+        <a href='/about' class='btn-ghost mt-8 no-underline'>Conoce TecnoFix</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cierre -->
+  <section class='border-t border-white/20'>
+    <div class='mx-auto max-w-page px-4 py-20 sm:px-8 lg:py-28'>
+      <h2 class='display mb-4 text-[clamp(44px,7vw,88px)] text-white'>
+        ¿Se dañó algo? Escríbenos.
+      </h2>
+      <p class='mb-10 max-w-[48ch] text-[19px] leading-relaxed text-fog'>
+        Cuéntanos qué equipo tienes y qué le pasa. Te respondemos por WhatsApp
+        y agendamos el diagnóstico gratis.
+      </p>
+      <Contacto />
+    </div>
+  </section>
 </Layout>

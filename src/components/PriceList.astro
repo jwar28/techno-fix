@@ -1,0 +1,78 @@
+---
+import { devices, formatCOP, PRICE_SCALE_MAX } from '../data/services';
+
+interface Props {
+  only?: string[];
+}
+const { only } = Astro.props;
+const list = only ? devices.filter((d) => only.includes(d.id)) : devices;
+const pct = (n: number) => (n / PRICE_SCALE_MAX) * 100;
+const ticks = [0, 100000, 200000, 300000];
+---
+
+<div class='paper perforated'>
+  <div
+    class='hidden grid-cols-[180px_1fr_minmax(0,1.3fr)_190px] gap-6 border-b-2 border-ink px-8 py-3 md:grid'>
+    <span class='field-label'>Equipo</span>
+    <span class='field-label'>Qué incluye</span>
+    <span class='font-type num flex justify-between text-[12px] text-paper-dim' aria-hidden='true'>
+      <span>$0</span><span>100 mil</span><span>200 mil</span><span>300 mil</span>
+    </span>
+    <span class='field-label text-right'>Precio (COP)</span>
+  </div>
+  <ul>
+    {
+      list.map((d) => (
+        <li class='border-b border-paper-rule last:border-b-0'>
+          <a
+            href={d.href}
+            class='group grid gap-x-6 gap-y-3 px-5 py-5 text-ink no-underline transition-colors duration-150 hover:bg-[#EDEEE6] sm:px-8 md:grid-cols-[170px_1fr_minmax(0,1.1fr)_250px] md:items-center'>
+            <span class='flex flex-wrap items-baseline justify-between gap-x-3 gap-y-1 md:block'>
+              <span class='text-[24px] font-black uppercase leading-none' style='font-stretch:75%'>
+                {d.plural}
+              </span>
+              <span class='num whitespace-nowrap text-[20px] font-black text-carbon md:hidden' style='font-stretch:75%'>
+                {formatCOP(d.min)} – {formatCOP(d.max)}
+              </span>
+            </span>
+            <span class='text-[16px] leading-snug text-[#3d4340]'>{d.includes}</span>
+            <span class='block' aria-hidden='true'>
+              <span class='relative block h-3 bg-[#E3E5DD]'>
+                {ticks.slice(1, -1).map((t) => (
+                  <span class='absolute inset-y-0 w-px bg-paper' style={`left:${pct(t)}%`} />
+                ))}
+                <span
+                  class='absolute inset-y-0 bg-carbon transition-colors group-hover:bg-ink'
+                  style={`left:${pct(d.min)}%;width:${pct(d.max - d.min)}%`}
+                />
+              </span>
+              <span class='font-type num mt-1.5 flex justify-between text-[12px] text-paper-dim md:hidden'>
+                <span>$0</span>
+                <span>100 mil</span>
+                <span>200 mil</span>
+                <span>300 mil</span>
+              </span>
+            </span>
+            <span class='hidden items-center justify-end gap-3 md:flex'>
+              <span class='num whitespace-nowrap text-[26px] font-black leading-none text-carbon' style='font-stretch:75%'>
+                {formatCOP(d.min)} – {formatCOP(d.max)}
+              </span>
+              <svg
+                class='shrink-0 transition-transform duration-200 group-hover:translate-x-1'
+                width='18'
+                height='14'
+                viewBox='0 0 18 14'
+                aria-hidden='true'>
+                <path d='M1 7h15M10 1l6 6-6 6' fill='none' stroke='currentColor' stroke-width='2' />
+              </svg>
+            </span>
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+  <p class='border-t-2 border-ink px-5 py-4 text-[15px] text-paper-dim sm:px-8'>
+    Domicilio incluido en todos los precios. El valor final se confirma después
+    del diagnóstico, que es gratis.
+  </p>
+</div>
