@@ -1,0 +1,387 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-05T19:56:36+00:00",
+  "title": "Design System: TecnoFix",
+  "extensions": {
+    "colorMeta": {
+      "mat": {
+        "role": "neutral",
+        "displayName": "Tapete ESD",
+        "canonical": "oklch(42.4% 0.054 201)",
+        "tonalRamp": [
+          "#001114",
+          "#002e31",
+          "#1a4e51",
+          "#3d7073",
+          "#619396",
+          "#85b9bc",
+          "#a8dcdf",
+          "#c5fafd"
+        ]
+      },
+      "mat-deep": {
+        "role": "neutral",
+        "displayName": "Tapete profundo",
+        "canonical": "oklch(36.2% 0.046 200)",
+        "tonalRamp": [
+          "#001013",
+          "#002d2f",
+          "#234d4f",
+          "#456e70",
+          "#689294",
+          "#8cb7b9",
+          "#aedbdd",
+          "#cbf9fb"
+        ]
+      },
+      "mint": {
+        "role": "tertiary",
+        "displayName": "Menta de soldadura",
+        "canonical": "oklch(86.7% 0.071 181)",
+        "tonalRamp": [
+          "#00130d",
+          "#003129",
+          "#005147",
+          "#307369",
+          "#55978c",
+          "#7abdb1",
+          "#9de1d4",
+          "#bafff1"
+        ]
+      },
+      "fog": {
+        "role": "neutral",
+        "displayName": "Niebla",
+        "canonical": "oklch(93.4% 0.017 188)",
+        "tonalRamp": [
+          "#040d0c",
+          "#1d2928",
+          "#3b4847",
+          "#5b6968",
+          "#7e8d8b",
+          "#a2b2b0",
+          "#c5d5d3",
+          "#e2f2f0"
+        ]
+      },
+      "paper": {
+        "role": "neutral",
+        "displayName": "Papel de talonario",
+        "canonical": "oklch(97.5% 0.007 107)",
+        "tonalRamp": [
+          "#0b0b08",
+          "#272723",
+          "#454541",
+          "#666662",
+          "#898985",
+          "#aeaea9",
+          "#d1d1cc",
+          "#efefea"
+        ]
+      },
+      "paper-rule": {
+        "role": "neutral",
+        "displayName": "Regla de talonario",
+        "canonical": "oklch(84.7% 0.013 122)",
+        "tonalRamp": [
+          "#0a0c06",
+          "#252721",
+          "#44463f",
+          "#65675f",
+          "#888a82",
+          "#acafa7",
+          "#cfd2c9",
+          "#edf0e7"
+        ]
+      },
+      "paper-dim": {
+        "role": "neutral",
+        "displayName": "Grafito",
+        "canonical": "oklch(48.2% 0.010 157)",
+        "tonalRamp": [
+          "#080c09",
+          "#232824",
+          "#414743",
+          "#626864",
+          "#858b87",
+          "#a9b0ab",
+          "#ccd3ce",
+          "#e9f1ec"
+        ]
+      },
+      "carbon": {
+        "role": "primary",
+        "displayName": "Tinta de calco",
+        "canonical": "oklch(45.6% 0.225 266)",
+        "tonalRamp": [
+          "#02003c",
+          "#08176b",
+          "#1c379d",
+          "#3359d2",
+          "#5580f7",
+          "#7fa9ff",
+          "#a7ceff",
+          "#c9edff"
+        ]
+      },
+      "stamp": {
+        "role": "secondary",
+        "displayName": "Rojo de sello",
+        "canonical": "oklch(56.7% 0.212 29)",
+        "tonalRamp": [
+          "#2d0000",
+          "#5a0000",
+          "#890000",
+          "#bb1e17",
+          "#e35143",
+          "#ff8272",
+          "#ffad9c",
+          "#ffd0c0"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Tinta",
+        "canonical": "oklch(19.5% 0.006 179)",
+        "tonalRamp": [
+          "#080c0b",
+          "#232726",
+          "#414645",
+          "#626766",
+          "#858a89",
+          "#aaafae",
+          "#cdd2d1",
+          "#eaf0ee"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Titular de página en blanco sobre el tapete; mayúsculas, anchura 72%."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Títulos de sección sobre el tapete."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Nombres de equipo, estados del seguimiento, encabezado de la orden."
+      },
+      "price": {
+        "displayName": "Precio",
+        "purpose": "Rangos de precio en cifras tabulares; calco sobre papel, menta sobre tapete."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Bajadas y párrafos, 44 a 58ch."
+      },
+      "label": {
+        "displayName": "Etiqueta de campo",
+        "purpose": "Rótulos de campo y columna dentro del papel; nunca antetítulo."
+      },
+      "typed": {
+        "displayName": "Mecanografiado",
+        "purpose": "Campos, número de orden, pies de foto y escala."
+      }
+    },
+    "shadows": [],
+    "materials": [
+      {
+        "name": "mat-grid",
+        "value": "background-color:#24575A; background-image:linear-gradient(rgb(255 255 255/.11) 1px,transparent 1px),linear-gradient(90deg,rgb(255 255 255/.11) 1px,transparent 1px),linear-gradient(rgb(255 255 255/.05) 1px,transparent 1px),linear-gradient(90deg,rgb(255 255 255/.05) 1px,transparent 1px); background-size:120px 120px,120px 120px,24px 24px,24px 24px",
+        "purpose": "Tapete antiestático: fondo de todo el sitio."
+      },
+      {
+        "name": "perforation",
+        "value": "radial-gradient(circle at 10px 10px,transparent 5.5px,#F7F7F2 6px) 0 0/20px 20px repeat-x; height 10px; top -9px",
+        "purpose": "Borde superior perforado de cada hoja de papel."
+      }
+    ],
+    "focus": [
+      {
+        "name": "focus-mat",
+        "value": "outline:3px solid #9FE3D6; outline-offset:3px",
+        "purpose": "Foco sobre el tapete."
+      },
+      {
+        "name": "focus-paper",
+        "value": "outline:3px solid #1F3FD1; outline-offset:3px",
+        "purpose": "Foco dentro del papel."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-out",
+        "value": "cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "Declarada en :root (--ease-out); ningún componente la usa todavía."
+      },
+      {
+        "name": "state-color",
+        "value": "150ms",
+        "purpose": "Cambios de color en botones, opciones y renglones."
+      },
+      {
+        "name": "retype",
+        "value": "22ms por carácter",
+        "purpose": "Re-mecanografiado del precio al cambiar de equipo; se omite con prefers-reduced-motion."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "sm",
+        "value": "640px"
+      },
+      {
+        "name": "md",
+        "value": "768px"
+      },
+      {
+        "name": "lg",
+        "value": "1024px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Botón de tinta",
+      "kind": "button",
+      "refersTo": "button-ink",
+      "description": "Acción primaria sobre papel: enviar la orden por WhatsApp.",
+      "html": "<div class=\"ds-paper\"><button class=\"ds-btn ds-btn-ink\">Enviar orden por WhatsApp <svg width=\"18\" height=\"14\" viewBox=\"0 0 18 14\" aria-hidden=\"true\"><path d=\"M1 7h15M10 1l6 6-6 6\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"/></svg></button></div>",
+      "css": ".ds-btn{display:inline-flex;align-items:center;justify-content:center;gap:12px;min-height:52px;padding:16px 24px;font:700 17px/1 'Archivo Variable', Archivo, system-ui, sans-serif;border:0;border-radius:0;cursor:pointer;transition:background-color .15s,color .15s,border-color .15s;text-decoration:none} .ds-paper{background:var(--paper,#F7F7F2);padding:24px} .ds-btn-ink{background:var(--ink,#121615);color:var(--paper,#F7F7F2)} .ds-btn-ink:hover{background:var(--carbon,#1F3FD1)} .ds-btn-ink:focus-visible{outline:3px solid var(--carbon,#1F3FD1);outline-offset:3px}"
+    },
+    {
+      "name": "Botón de línea",
+      "kind": "button",
+      "refersTo": "button-line",
+      "description": "Acción secundaria sobre papel (Llamar).",
+      "html": "<div class=\"ds-paper\"><a href=\"#\" class=\"ds-btn ds-btn-line\">Llamar</a></div>",
+      "css": ".ds-btn{display:inline-flex;align-items:center;justify-content:center;gap:12px;min-height:52px;padding:16px 24px;font:700 17px/1 'Archivo Variable', Archivo, system-ui, sans-serif;border:0;border-radius:0;cursor:pointer;transition:background-color .15s,color .15s,border-color .15s;text-decoration:none} .ds-paper{background:var(--paper,#F7F7F2);padding:24px} .ds-btn-line{background:transparent;color:var(--ink,#121615);border:1.5px solid var(--ink,#121615)} .ds-btn-line:hover{background:var(--ink,#121615);color:var(--paper,#F7F7F2)} .ds-btn-line:focus-visible{outline:3px solid var(--carbon,#1F3FD1);outline-offset:3px}"
+    },
+    {
+      "name": "Botón de papel",
+      "kind": "button",
+      "refersTo": "button-paper",
+      "description": "Acción principal sobre el tapete (WhatsApp de la barra, canal principal).",
+      "html": "<div class=\"ds-mat\"><a href=\"#\" class=\"ds-btn ds-btn-paper\">WhatsApp <span style=\"font-variant-numeric:tabular-nums\">318 421 4427</span></a></div>",
+      "css": ".ds-btn{display:inline-flex;align-items:center;justify-content:center;gap:12px;min-height:52px;padding:16px 24px;font:700 17px/1 'Archivo Variable', Archivo, system-ui, sans-serif;border:0;border-radius:0;cursor:pointer;transition:background-color .15s,color .15s,border-color .15s;text-decoration:none} .ds-mat{background:var(--mat,#24575A);padding:24px} .ds-btn-paper{background:var(--paper,#F7F7F2);color:var(--ink,#121615)} .ds-btn-paper:hover{background:var(--mint,#9FE3D6)} .ds-btn-paper:focus-visible{outline:3px solid var(--mint,#9FE3D6);outline-offset:3px}"
+    },
+    {
+      "name": "Botón fantasma",
+      "kind": "button",
+      "refersTo": "button-ghost",
+      "description": "Acción secundaria sobre el tapete.",
+      "html": "<div class=\"ds-mat\"><a href=\"#\" class=\"ds-btn ds-btn-ghost\">Conoce TecnoFix</a></div>",
+      "css": ".ds-btn{display:inline-flex;align-items:center;justify-content:center;gap:12px;min-height:52px;padding:16px 24px;font:700 17px/1 'Archivo Variable', Archivo, system-ui, sans-serif;border:0;border-radius:0;cursor:pointer;transition:background-color .15s,color .15s,border-color .15s;text-decoration:none} .ds-mat{background:var(--mat,#24575A);padding:24px} .ds-btn-ghost{background:transparent;color:#fff;border:1.5px solid rgb(221 237 235 / .7)} .ds-btn-ghost:hover{border-color:#fff;background:rgb(255 255 255 / .1)} .ds-btn-ghost:focus-visible{outline:3px solid var(--mint,#9FE3D6);outline-offset:3px}"
+    },
+    {
+      "name": "Campo mecanografiado",
+      "kind": "input",
+      "refersTo": "field-typed",
+      "description": "Campo de la orden: etiqueta de campo y valor en Courier Prime de calco sobre subrayado punteado.",
+      "html": "<div class=\"ds-paper\"><label class=\"ds-label\" for=\"ds-p\">2 · ¿Qué le pasa?</label><input id=\"ds-p\" class=\"ds-typed\" placeholder=\"Ej.: la batería no me dura ni medio día\"></div>",
+      "css": ".ds-paper{background:var(--paper,#F7F7F2);padding:24px 32px} .ds-label{display:block;margin-bottom:8px;font:600 13px/1.2 'Archivo Variable', Archivo, system-ui, sans-serif;letter-spacing:.12em;text-transform:uppercase;color:var(--paper-dim,#5A605C)} .ds-typed{display:block;width:100%;border:0;border-bottom:1.5px dotted #8D928D;background:transparent;padding:4px 0;font:400 19px/1.375 'Courier Prime', ui-monospace, monospace;color:var(--carbon,#1F3FD1);border-radius:0} .ds-typed::placeholder{color:#6F7570} .ds-typed:focus{outline:none;border-bottom-color:var(--carbon,#1F3FD1)} .ds-typed:focus-visible{outline:3px solid var(--carbon,#1F3FD1);outline-offset:3px}"
+    },
+    {
+      "name": "Opción de equipo",
+      "kind": "chip",
+      "refersTo": "device-option",
+      "description": "Selector de equipo de la orden; seleccionada se invierte a tinta.",
+      "html": "<div class=\"ds-paper\"><div class=\"ds-grid\"><label class=\"ds-opt ds-on\"><span class=\"ds-box\"><span></span></span>Celular</label><label class=\"ds-opt\"><span class=\"ds-box\"></span>Tableta</label></div></div>",
+      "css": ".ds-paper{background:var(--paper,#F7F7F2);padding:24px 32px} .ds-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px} .ds-opt{display:flex;align-items:center;gap:10px;min-height:48px;padding:0 12px;border:1.5px solid var(--ink,#121615);font:700 16px/1 'Archivo Variable', Archivo, system-ui, sans-serif;color:var(--ink,#121615);cursor:pointer;transition:background-color .15s} .ds-opt:hover{background:#E9EAE2} .ds-opt.ds-on{background:var(--ink,#121615);color:var(--paper,#F7F7F2)} .ds-box{display:grid;place-items:center;width:16px;height:16px;border:1.5px solid currentColor} .ds-box span{width:8px;height:8px;background:var(--paper,#F7F7F2)}"
+    },
+    {
+      "name": "Barra de navegación",
+      "kind": "nav",
+      "refersTo": "nav-bar",
+      "description": "Barra fija sobre el tapete con marca, enlaces y WhatsApp.",
+      "html": "<nav class=\"ds-nav\"><a class=\"ds-brand\" href=\"#\">Tecno<span>Fix</span></a><ul><li><a href=\"#\" aria-current=\"page\">Servicios y precios</a></li><li><a href=\"#\">Nosotros</a></li><li><a href=\"#\">Contacto</a></li></ul><a class=\"ds-wa\" href=\"#\">WhatsApp</a></nav>",
+      "css": ".ds-nav{display:flex;align-items:center;justify-content:space-between;gap:24px;height:72px;padding:0 32px;background:var(--mat,#24575A);border-bottom:1px solid rgb(255 255 255 / .2);font-family:'Archivo Variable', Archivo, system-ui, sans-serif} .ds-brand{font-size:28px;font-weight:900;font-stretch:80%;text-transform:uppercase;color:#fff;text-decoration:none} .ds-brand span{color:var(--mint,#9FE3D6)} .ds-nav ul{display:flex;gap:32px;list-style:none;margin:0;padding:0} .ds-nav ul a{font-size:16px;font-weight:500;color:var(--fog,#DDEDEB);text-decoration:none;text-underline-offset:.2em} .ds-nav ul a:hover{color:#fff;text-decoration:underline} .ds-nav ul a[aria-current]{color:#fff;text-decoration:underline 2px var(--mint,#9FE3D6)} .ds-nav a:focus-visible{outline:3px solid var(--mint,#9FE3D6);outline-offset:3px} .ds-wa{min-height:44px;display:inline-flex;align-items:center;padding:8px 16px;background:var(--paper,#F7F7F2);color:var(--ink,#121615);font-weight:700;font-size:15px;text-decoration:none} .ds-wa:hover{background:var(--mint,#9FE3D6)}"
+    },
+    {
+      "name": "Hoja de talonario",
+      "kind": "card",
+      "refersTo": "order-sheet",
+      "description": "Superficie de trabajo: papel con borde perforado, regla de tinta y renglones.",
+      "html": "<div class=\"ds-mat\"><div class=\"ds-sheet\"><div class=\"ds-head\">Orden de servicio<span>N.º 0511-1452</span></div><div class=\"ds-row\"><span class=\"ds-lbl\">3 · Precio estimado (COP)</span><span class=\"ds-price\">$50.000 – $150.000</span></div></div></div>",
+      "css": ".ds-mat{background:var(--mat,#24575A);padding:40px 24px} .ds-sheet{position:relative;background:var(--paper,#F7F7F2);color:var(--ink,#121615);font-family:'Archivo Variable', Archivo, system-ui, sans-serif;max-width:620px} .ds-sheet::before{content:'';position:absolute;left:0;right:0;top:-9px;height:10px;background:radial-gradient(circle at 10px 10px,transparent 5.5px,var(--paper,#F7F7F2) 6px) 0 0/20px 20px repeat-x} .ds-head{padding:20px 32px 16px;border-bottom:2px solid var(--ink,#121615);font-size:26px;font-weight:900;font-stretch:75%;text-transform:uppercase;line-height:1} .ds-head span{display:block;margin-top:6px;font:700 16px 'Courier Prime', ui-monospace, monospace;color:var(--carbon,#1F3FD1);text-transform:none} .ds-row{padding:16px 32px 24px} .ds-lbl{display:block;font-size:13px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--paper-dim,#5A605C)} .ds-price{display:block;font-size:54px;font-weight:900;font-stretch:75%;line-height:1;color:var(--carbon,#1F3FD1);font-variant-numeric:tabular-nums}"
+    },
+    {
+      "name": "Sello",
+      "kind": "custom",
+      "refersTo": "seal",
+      "description": "Sello de doble aro, solo para Diagnóstico gratis / Garantía.",
+      "html": "<div class=\"ds-paper\"><div class=\"ds-seal\">Diagnós&shy;tico<br>gratis</div></div>",
+      "css": ".ds-paper{background:var(--paper,#F7F7F2);padding:32px} .ds-seal{display:grid;place-items:center;text-align:center;width:128px;height:128px;transform:rotate(14deg);color:var(--stamp,#D7261E);border:3px solid currentColor;outline:1.5px solid currentColor;outline-offset:-8px;border-radius:9999px;font:900 22px/.95 'Archivo Variable', Archivo, system-ui, sans-serif;font-stretch:70%;text-transform:uppercase}"
+    },
+    {
+      "name": "Foto impresa",
+      "kind": "custom",
+      "description": "Fotografía con marco blanco y pie mecanografiado, girada sobre el tapete.",
+      "html": "<div class=\"ds-mat\"><figure class=\"ds-print\"><div class=\"ds-img\"></div><figcaption>Reparación de placa de celular</figcaption></figure></div>",
+      "css": ".ds-mat{background:var(--mat,#24575A);padding:40px} .ds-print{margin:0;width:250px;background:#fff;padding:10px 10px 0;transform:rotate(-3deg)} .ds-img{height:110px;background:#E3E5DD} .ds-print figcaption{font:400 13px 'Courier Prime', ui-monospace, monospace;padding:8px 2px 10px;color:#3D4340}"
+    }
+  ],
+  "narrative": {
+    "northStar": "El tapete del taller",
+    "overview": "Todo el sitio está sobre un tapete antiestático verde-azul con su cuadrícula impresa, y encima de él se apoyan los papeles del taller: la orden de servicio de talonario, las tarjetas de precio, las fotos impresas con borde blanco. El visitante no mira un folleto; llena una orden. Los valores que el cliente escribe o que el taller cotiza aparecen en tinta de calco azul; lo que el taller garantiza lleva el sello rojo.\n\nLa densidad es de mesa de trabajo, no de revista: titulares condensados enormes en mayúsculas sobre el tapete, y papeles con reglas finas, etiquetas de campo y valores mecanografiados. Los papeles pueden girarse uno o dos grados, como si alguien los hubiera dejado sobre la mesa; nunca flotan con sombra. Todo es recto y de esquina viva, salvo el sello y el logo.",
+    "keyCharacteristics": [
+      "Fondo único: el tapete (#24575A) con cuadrícula de 24px y mayor de 120px, en todas las páginas.",
+      "Superficies de trabajo en papel de talonario, con borde superior perforado.",
+      "Tres voces de color con trabajo asignado: azul de calco para valores, rojo de sello para garantías, menta para acentos sobre el tapete.",
+      "Archivo condensada 900 en mayúsculas para titulares; Courier Prime solo para lo mecanografiado.",
+      "Sin sombras, sin degradados de color, sin esquinas redondeadas."
+    ],
+    "rules": [
+      {
+        "name": "La Regla de las Dos Tintas",
+        "body": "El azul de calco solo marca valores (precios, números de orden, lo que el cliente escribe); el rojo solo marca lo que el taller garantiza. Si un elemento no es un valor ni una garantía, no lleva ninguna de las dos.",
+        "section": "colors"
+      },
+      {
+        "name": "La Regla del Precio Legible",
+        "body": "Sobre papel, el precio va en tinta de calco; sobre el tapete, va en menta. El azul de calco nunca se pone directamente sobre el tapete.",
+        "section": "colors"
+      },
+      {
+        "name": "La Regla de la Máquina de Escribir",
+        "body": "Courier Prime solo aparece en lo que se llenaría a máquina en un formulario: campos, número de orden, pies de foto, cifras de la escala. Nunca en titulares, botones ni texto corrido.",
+        "section": "typography"
+      },
+      {
+        "name": "La Regla de la Etiqueta de Campo",
+        "body": "Las etiquetas en mayúsculas espaciadas rotulan un campo o una columna dentro del papel. No se usan como antetítulo encima de un titular.",
+        "section": "typography"
+      },
+      {
+        "name": "La Regla del Papel Sobre la Mesa",
+        "body": "Ninguna superficie lleva box-shadow. Si algo debe verse \"encima\", se superpone y se gira; no se eleva.",
+        "section": "elevation"
+      },
+      {
+        "name": "La Regla del Degradado Técnico",
+        "body": "Los únicos gradientes CSS permitidos dibujan materiales del mundo: las líneas de la cuadrícula del tapete y las perforaciones del talonario. Ninguno puede leerse como transición de color.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do poner cada página sobre el tapete con su cuadrícula de 24px y 120px; el tapete es el fondo, no una sección.",
+      "Do presentar cualquier contenido de trabajo (formularios, precios, procesos) como una hoja de papel con borde perforado y reglas de tinta de 2px.",
+      "Do usar tinta de calco solo para valores sobre papel, y menta para valores sobre el tapete.",
+      "Do reservar el sello rojo para \"Diagnóstico gratis\", \"Gratis\" y \"Garantía\".",
+      "Do mostrar fotos como impresiones con marco blanco de 10px y pie mecanografiado.",
+      "Do mantener alto mínimo de 48px en controles y 52px en botones.",
+      "Do respetar prefers-reduced-motion: el re-mecanografiado y las transiciones se desactivan."
+    ],
+    "donts": [
+      "Don't usar box-shadow en ninguna superficie; la profundidad es superposición y giro.",
+      "Don't usar degradados de color; los gradientes CSS solo dibujan la cuadrícula y las perforaciones.",
+      "Don't redondear esquinas; la única forma redonda es el sello (y el disco del logo).",
+      "Don't usar Courier Prime fuera de lo mecanografiado.",
+      "Don't poner etiquetas en mayúsculas espaciadas como antetítulo encima de un titular.",
+      "Don't usar rojo de sello para errores, alertas o énfasis.",
+      "Don't poner tinta de calco directamente sobre el tapete."
+    ]
+  }
+}
